@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "BJMoon Pro",
+  "version": "1.0.0",
+  "description": "Blackjack Strategy — Real-time DOM Scanner & Advisor (ExtensionPay)",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["https://extensionpay.com/*", "*://*.stake.com/*", "*://*.stake.us/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.stake.com/*", "*://*.stake.us/*", "https://extensionpay.com/*"],
+      "js": ["strategy.js", "site-configs.js", "content.js"],
+      "css": ["overlay.css"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}
