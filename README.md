@@ -22,3 +22,5 @@ The same process can be used in **Opera** and **Brave** through their extension 
 3. Once the game loads, the Blackjack Assistant will automatically appear on the page.
 
 That's it — the assistant is now ready to use.
+
+keywords: blackjack assistant, blackjack strategy, blackjack card counting, browser extension
